@@ -1,0 +1,173 @@
+@import "../../global.scss";
+
+.footer{
+    background-color: blueviolet;
+    height: 220px;
+    display: flex;
+
+    @include mobile{
+        display: block;
+        height: fit-content;
+    }
+
+    .left{
+        flex: 0.35;
+        background-color: white;
+        
+
+
+        .footer-links{
+            display: flex;
+            margin: 40px 15px;
+
+            @include mobile{
+                display: block;
+                
+            }
+
+            .social-links{
+
+                p{
+                    font-size: 12px;
+                    margin: 10px 0;
+                }
+
+                .logo{
+                    height: 24px;
+                }
+
+                .socials{
+                    height: 14px;
+                }
+
+                .links{
+                    margin-top: 40px;
+                    display: flex;
+
+                    @include mobile{
+                        margin: 15px auto;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    a{
+                        margin-inline-end: 1rem;
+
+                        &:hover{
+                            opacity: 0.6;
+                        }
+                    }
+                }
+
+                @include mobile{
+                    margin: auto;
+                    text-align: center;
+                    
+                }
+            }
+
+            > div{
+                width: 50%;
+                max-width: 250px;
+                margin-left: 40px;
+
+                
+            }
+
+            > *{
+                @include mobile{
+                    width: 100%;
+                    margin: 10px auto;
+                }
+            }
+
+        }
+
+        .corebiz-links{
+            ul{
+                li{
+                    text-align: left;
+                    padding-top: 8px;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid;
+
+                    @include mobile{
+                        text-align: center;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 600;
+                        transition: all 0.4s ease;
+
+                        @include mobile{
+                            font-size: 12px;
+                        }
+
+                        &:hover{
+                            opacity: 0.6;
+                        }
+                    }
+                    
+                }
+
+                @include mobile{
+                    width: 100%;
+                    padding: 0;
+                    min-width: 270px;
+                    
+                }
+
+            }
+
+            @include mobile{
+                overflow: visible;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+
+            }
+
+        }
+    }
+
+    .right{
+        flex: 0.65;
+        background-color: #f4f4f4;
+
+
+        .adresses{
+            display: flex;
+            margin: 40px 15px;
+
+            @include mobile{
+                display: block;
+            }
+
+            > div{
+                width: 25%;
+                max-width: 250px;
+                margin-left: 50px;
+                
+                h3{
+                    font-size: 1.1em;
+                }
+
+                p{
+                    margin-top: 15px;
+                    font-size: 0.75rem;
+
+                    @include mobile{
+                        font-weight: 500;
+                     }
+                }
+
+                @include mobile{
+                   width: 100%;
+                   margin-top: 20px;
+                }
+            }
+        }
+    }
+}

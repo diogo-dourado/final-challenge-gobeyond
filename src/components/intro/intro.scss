@@ -1,0 +1,123 @@
+@import "../../global.scss";
+
+.intro{
+    height: 710px;
+    display: flex;
+
+    @include mobile{
+        display: block;
+        
+    }
+
+    .left{
+        flex: 0.35;
+        background-color: black;
+
+        @include mobile{
+            flex: none;
+        }
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include mobile{
+                width: 325px;
+            }
+
+            h3{
+                font-size: 60px;
+                text-align: left;
+                margin: 10px 0;
+                width: 500px;
+                height: 300px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                color: #ffffff;
+
+                @include mobile{
+                    font-size: 40px;
+                    width: fit-content;
+                    height: 250px;
+                }
+            }
+
+            a{
+                max-width: 195px;
+                background-color: #ffffff;
+                text-decoration: none;
+                color: black;
+                font-weight: 500;
+                border-radius: 50px;
+                height: 50px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                transition: color .15 ease;
+
+                &:hover{
+                    opacity: 0.6;
+                }
+
+                img{
+                    height: 16px;
+                }
+            }
+
+            .thumbsContainer{
+                display: flex;
+                margin-top: 60px;
+                padding: 0;
+                list-style: none;
+
+                @include mobile{
+                    margin-top: 30px;
+                }
+                
+            }
+        }
+    }
+
+    .right{
+        flex: 0.65;
+        background-color: black;
+
+        @include mobile{
+            flex: none;
+        }
+
+        .imgContainer{
+            height: 670px;
+            width: 1130px;
+            display: flex;
+            align-items: flex-end;
+            justify-items: center;
+
+            @include mobile{
+                flex-direction: column;
+                width: 340px;
+                height: 227px;
+                margin: 30px;
+               
+            }
+
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+
+                @include mobile{
+                    height: 100%;
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+}

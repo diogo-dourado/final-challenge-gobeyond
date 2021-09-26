@@ -1,0 +1,27 @@
+@import "../../global.scss";
+
+.imagesList{
+    margin-right: 20px;
+    cursor: pointer;
+    height: 72px;
+    width: 122px;
+    overflow-y: hidden;
+
+    @include mobile{
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+    &.active{
+        border: 2px solid #ffffff;
+        
+    }
+}
